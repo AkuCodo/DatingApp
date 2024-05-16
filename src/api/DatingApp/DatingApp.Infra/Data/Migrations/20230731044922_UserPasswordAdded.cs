@@ -1,38 +1,38 @@
-﻿//using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-//#nullable disable
+#nullable disable
 
-//namespace DatingApp.Infra.Data.Migrations
-//{
-//    /// <inheritdoc />
-//    public partial class UserPasswordAdded : Migration
-//    {
-//        /// <inheritdoc />
-//        protected override void Up(MigrationBuilder migrationBuilder)
-//        {
-//            migrationBuilder.AddColumn<byte[]>(
-//                name: "PasswordHash",
-//                table: "Users",
-//                type: "BLOB",
-//                nullable: true);
+namespace DatingApp.Infra.Data.Migrations
+{
+    /// <inheritdoc />
+    public partial class UserPasswordAdded : Migration
+    {
+        /// <inheritdoc />
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.AddColumn<byte[]>(
+                name: "PasswordHash",
+                table: "Users",
+                type: "BLOB",
+                nullable: true);
 
-//            migrationBuilder.AddColumn<byte[]>(
-//                name: "PasswordSalt",
-//                table: "Users",
-//                type: "BLOB",
-//                nullable: true);
-//        }
+            migrationBuilder.AddColumn<byte[]>(
+                name: "PasswordSalt",
+                table: "Users",
+                type: "BLOB",
+                nullable: true);
+        }
 
-//        /// <inheritdoc />
-//        protected override void Down(MigrationBuilder migrationBuilder)
-//        {
-//            migrationBuilder.DropColumn(
-//                name: "PasswordHash",
-//                table: "Users");
+        /// <inheritdoc />
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropColumn(
+                name: "PasswordHash",
+                table: "Users");
 
-//            migrationBuilder.DropColumn(
-//                name: "PasswordSalt",
-//                table: "Users");
-//        }
-//    }
-//}
+            migrationBuilder.DropColumn(
+                name: "PasswordSalt",
+                table: "Users");
+        }
+    }
+}
