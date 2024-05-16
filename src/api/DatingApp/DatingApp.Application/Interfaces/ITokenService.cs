@@ -1,6 +1,6 @@
-﻿using DatingApp.API.Entities;
+﻿using DatingApp.Domain.Entities;
 
-namespace DatingApp.API.Interfaces;
+namespace DatingApp.Domain.Interfaces;
 
 public interface ITokenService
 {

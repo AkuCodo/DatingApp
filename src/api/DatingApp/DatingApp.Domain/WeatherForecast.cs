@@ -1,4 +1,4 @@
-namespace DatingApp.API;
+namespace DatingApp.Domain;
 
 public class WeatherForecast
 {

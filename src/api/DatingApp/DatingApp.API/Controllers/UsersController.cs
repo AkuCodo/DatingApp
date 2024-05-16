@@ -1,10 +1,10 @@
-﻿using DatingApp.API.Data;
-using DatingApp.API.Entities;
+﻿using DatingApp.Domain.Entities;
+using DatingApp.Infra.Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace DatingApp.API.Controllers;
+namespace DatingApp.Api.Controllers;
 
 [Authorize]
 public class UsersController : BaseApiController

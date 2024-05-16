@@ -4,16 +4,16 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>39ac3202-7566-4899-a77d-bb459eb0f171</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.9" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.9">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.9" />
-    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.32.1" />
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DatingApp.Infra\DatingApp.Infra.csproj" />
+    <ProjectReference Include="..\DatingApp.Ioc\DatingApp.Ioc.csproj" />
   </ItemGroup>
 
 </Project>

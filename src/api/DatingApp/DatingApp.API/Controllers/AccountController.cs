@@ -1,13 +1,13 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
-using DatingApp.API.Data;
-using DatingApp.API.DTOs;
-using DatingApp.API.Entities;
-using DatingApp.API.Interfaces;
+using DatingApp.Domain.DTOs;
+using DatingApp.Domain.Entities;
+using DatingApp.Domain.Interfaces;
+using DatingApp.Infra.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace DatingApp.API.Controllers;
+namespace DatingApp.Api.Controllers;
 
 public class AccountController : BaseApiController
 {
@@ -52,7 +52,7 @@ public class AccountController : BaseApiController
 
         if (user == null) return Unauthorized("Invalid username");
 
-        if (user.PasswordSalt != null && user.PasswordHash != null)
+        if (user.PasswordSalt != null || user.PasswordHash != null)
         {
             using var hmac = new HMACSHA512(user.PasswordSalt);
 

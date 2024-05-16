@@ -1,6 +1,7 @@
+using DatingApp.Domain;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DatingApp.API.Controllers;
+namespace DatingApp.Api.Controllers;
 
 public class WeatherForecastController : BaseApiController
 {
